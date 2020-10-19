@@ -29,7 +29,7 @@ class MiCustomDialog : DialogFragment(){
         //dialog!!.window?.setLayout(height, ViewGroup.LayoutParams.WRAP_CONTENT)
     }
     fun login(view: View){
-        var et_user = dialog!!.findViewById<EditText>(R.id.editTextNombreR)
+        var et_user = dialog!!.findViewById<EditText>(R.id.editTextNombreInfo)
         var et_password = dialog!!.findViewById<EditText>(R.id.editTextContrasenaL)
         var user = et_user.text.toString()
         var pass = et_password.text.toString()

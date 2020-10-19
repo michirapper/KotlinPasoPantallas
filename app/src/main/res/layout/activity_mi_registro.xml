@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNombreR"
+        android:id="@+id/editTextNombreInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lblNombre" />
 
     <EditText
-        android:id="@+id/editTextApellido"
+        android:id="@+id/editTextApellidoInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lblApellido" />
 
     <EditText
-        android:id="@+id/editTextUsuario"
+        android:id="@+id/editTextUsuarioInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lblUsuario" />
 
     <EditText
-        android:id="@+id/editTextContrasena"
+        android:id="@+id/editTextContrasenaInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
@@ -76,7 +76,7 @@
         android:onClick="atras"
         app:layout_constraintEnd_toStartOf="@+id/btnAceptar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextContrasena" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextContrasenaInfo" />
 
     <Button
         android:id="@+id/btnAceptar"
@@ -89,7 +89,7 @@
         android:onClick="Registro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnCancelar"
-        app:layout_constraintTop_toBottomOf="@+id/editTextContrasena" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextContrasenaInfo" />
 
     <TextView
         android:id="@+id/lblApellido"
@@ -101,7 +101,7 @@
         android:text="Apellido"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNombreR" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombreInfo" />
 
     <TextView
         android:id="@+id/lblUsuario"
@@ -112,7 +112,7 @@
         android:text="Usuario"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextApellido" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextApellidoInfo" />
 
     <TextView
         android:id="@+id/lblContrasena"
@@ -123,5 +123,5 @@
         android:text="Contraseña"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextUsuario" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsuarioInfo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

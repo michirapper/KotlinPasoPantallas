@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,7 +24,10 @@ class MainActivity : AppCompatActivity() {
         MiCustomDialog().show(supportFragmentManager, "MiCustomDialogTag")
     }
     fun pasarInfo(view: View){
-        val proyectoseleccionado: Usuarios = intent.getSerializableExtra("user") as Usuarios
-        Toast.makeText(applicationContext, proyectoseleccionado.usuario, Toast.LENGTH_LONG).show()
+        val usuarioObj: Usuarios = intent.getSerializableExtra("user") as Usuarios
+        val intent = Intent(this, MiInformacion::class.java)
+        intent.putExtra("user", usuarioObj);
+        startActivity(intent)
+        finish()
     }
 }

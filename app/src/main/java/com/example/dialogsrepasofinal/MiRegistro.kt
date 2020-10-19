@@ -16,10 +16,10 @@ class MiRegistro : AppCompatActivity(), Serializable {
 
     fun Registro(view: View) {
         var usuario = Usuarios("", "", "", "")
-        usuario.nombre = findViewById<EditText>(R.id.editTextNombreR).text.toString()
-        usuario.apellidos = findViewById<EditText>(R.id.editTextApellido).text.toString()
-        usuario.usuario = findViewById<EditText>(R.id.editTextUsuario).text.toString()
-        usuario.contrasena = findViewById<EditText>(R.id.editTextContrasena).text.toString()
+        usuario.nombre = findViewById<EditText>(R.id.editTextNombreInfo).text.toString()
+        usuario.apellidos = findViewById<EditText>(R.id.editTextApellidoInfo).text.toString()
+        usuario.usuario = findViewById<EditText>(R.id.editTextUsuarioInfo).text.toString()
+        usuario.contrasena = findViewById<EditText>(R.id.editTextContrasenaInfo).text.toString()
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("user", usuario);
 
