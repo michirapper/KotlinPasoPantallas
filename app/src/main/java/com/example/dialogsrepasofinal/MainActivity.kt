@@ -39,11 +39,15 @@ class MainActivity : AppCompatActivity() {
         val usuarioObj: Usuarios = intent.getSerializableExtra("user") as Usuarios
         var usu = usuarioObj.usuario
         var pass = usuarioObj.contrasena
+        var nomb = usuarioObj.nombre
+        var apellid = usuarioObj.apellidos
         Toast.makeText(this, usu + " " + pass, Toast.LENGTH_LONG).show()
         val dialogFragment = MiCustomDialog()
         val args = Bundle()
         args.putString("user",usu)
         args.putString("pass",pass)
+        args.putString("nomb",nomb)
+        args.putString("apellid",apellid)
         dialogFragment.setArguments(args)
         dialogFragment.show(supportFragmentManager, "MiCustomDialogTag")
     }

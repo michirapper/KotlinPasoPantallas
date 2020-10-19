@@ -33,10 +33,12 @@ class MiCustomDialog : DialogFragment(){
         var et_password = dialog!!.findViewById<EditText>(R.id.editTextContrasenaL)
         var user = et_user.text.toString()
         var pass = et_password.text.toString()
-
+        var usuario = Usuarios("", "", "", "")
 
         var userR = getArguments()?.getString("user")
         var passR = getArguments()?.getString("pass")
+        var nombR = getArguments()?.getString("nomb")
+        var apellR = getArguments()?.getString("apellid")
         var mensaje = user + " " + userR
        // Toast.makeText(this.activity, mensaje, Toast.LENGTH_LONG).show()
         var miIntent = Intent(this.activity, MainActivity::class.java)
@@ -48,6 +50,11 @@ class MiCustomDialog : DialogFragment(){
             miIntent.putExtra("Login", "false")
             Toast.makeText(this.activity, "no es igual", Toast.LENGTH_LONG).show()
         }
+        usuario.nombre = nombR.toString()
+        usuario.apellidos = apellR.toString()
+        usuario.contrasena = passR.toString()
+        usuario.usuario = userR.toString()
+        miIntent.putExtra("user", usuario);
         startActivity(miIntent)
 
 
